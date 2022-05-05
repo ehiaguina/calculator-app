@@ -1,2 +1,2 @@
 # calculator-app
-This is a simple python calculator app that uses list
+This is a simple python calculator app that uses list and dictionary
