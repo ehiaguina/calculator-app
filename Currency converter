@@ -1,0 +1,38 @@
+
+total = 1
+
+
+print('''Welcome to your currency converter App
+
+         For USD conversion to Naira press 1,
+         For GBP conversion to Naira press 2,
+         For CAD conversion to Naira press 3
+         For EUR conversion to Naira press 4,
+         For CHF conversion to Naira press 5
+         For YEN conversion to Naira press 6 *''')
+
+
+signs = input('Enter the conversion value: ')
+amount = float(input('Enter the amount you want to convert: '))
+
+if signs == '1':
+        total = amount * 580
+
+elif signs == '2':
+        total = amount * 700
+
+elif signs == '3':
+        total = amount * 400
+
+elif signs == '4':
+       total = amount * 600
+        
+elif signs == '5':
+       total = amount * 550
+        
+elif signs == '6':
+       total = amount * 200
+
+
+
+print('The conversion is NGN {}'.format(total))
