@@ -1,0 +1,61 @@
+values_collector = []  # empty list
+multi = 1
+total = 0
+index = 0
+
+print('''For addition press the +,
+         For Subtraction press the -
+         For division press the /
+         For Multiplication press the *''')
+
+entries = int(input('Enter the number of the values you want to compute: '))
+signs = input('Enter the sign: ')
+
+
+while index < entries:
+    my_input = float(input('Enter your values: '))
+    values_collector.append(my_input)
+    index +=1
+    
+to_remove = input('Do you want to remove any values, enter Y for yes and N for no ').upper()
+
+if to_remove == 'Y':
+    values_re=[]
+    x = 0
+    no_to_remove = int(input('How many variables do you want to remove: '))
+    while x < no_to_remove:
+        my_removed = int(input('Enter your values: '))
+        values_re.append(my_removed)
+        x +=1
+        
+    for y in values_re:
+        values_collector.remove(y) 
+        
+
+my_clear = input("Do you want to clear all the values press Y for yes and N for No  ").upper()
+
+if my_clear == 'Y':
+    values_collector.clear()
+    print('There is no values to compute because its cleared')
+
+elif my_clear == 'N':
+    if signs == '+':
+        for x in range(len(values_collector)):
+            total +=values_collector[x] 
+
+    elif signs == '-':
+        for x in range(len(values_collector)):
+            total -=values_collector[x] 
+
+    elif signs == '*':
+        for x in range(len(values_collector)):
+            multi *=values_collector[x] 
+            total = multi
+
+    elif signs == '/':
+        for x in range(len(values_collector)):
+            multi /=values_collector[x] 
+            total = multi
+
+
+    print('The computation of all the values {} is {}'.format(values_collector, total))
